@@ -636,7 +636,25 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('frontend_index') }}" target="_blank">
+                        <a href="#">
+                            <span class="nav-link-icon">
+                                <i data-feather="layers"></i>
+                            </span>
+                            <span>Category</span>
+                        </a>
+                        <ul>
+                            
+                            <li>
+                                <a href="{{ route('category.create') }}">Add Category</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('category.index') }}">View Categories</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('frontend.index') }}" target="_blank">
                             <span class="nav-link-icon">
                                 <i data-feather="layout"></i>
                             </span>

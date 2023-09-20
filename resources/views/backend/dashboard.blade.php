@@ -1,8 +1,5 @@
 @extends('layouts.dashboard_master')
 
-@section('breadcumb')
-    
-@endsection
 
 @section('upper-header')
     <x-dashboard-welcome-header />
@@ -36,24 +33,26 @@
         <div class="col-lg-4 col-md-12">
             <div class="card card-light">
                 <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                        <h6 class="card-title mb-2">Monthly Sales</h6>
-                        <div>
-                            <a href="#" class="btn btn-outline-light btn-sm btn-floating mr-2">
-                                <i class="fa fa-refresh"></i>
-                            </a>
-                            <div class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="btn btn-outline-light btn-sm btn-floating" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    @if (auth()->user()->role=='super-admin')
+                        <div class="d-flex justify-content-between">
+                            <h6 class="card-title mb-2">Monthly Sales</h6>
+                            <div>
+                                <a href="#" class="btn btn-outline-light btn-sm btn-floating mr-2">
+                                    <i class="fa fa-refresh"></i>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" class="btn btn-outline-light btn-sm btn-floating" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <p class="small text-muted">Avarage total sales +25,5%</p>
                     <div id="hot-products"></div>
                     <ul class="list-inline text-center">

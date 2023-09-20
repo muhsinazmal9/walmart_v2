@@ -43,7 +43,7 @@
                                     <h3 class="input_title">Email*</h3>
                                     <div class="form_item">
                                         <label for="username_input"><i class="fas fa-user"></i></label>
-                                        <input id="username_input" type="email" name="email" placeholder="Your email">
+                                        <input id="username_input" type="email" name="email" placeholder="Your email" value="{{ old('email') }}">
                                     </div>
                                     @error('email')
                                         <div class="alert alert-danger" role="alert">
@@ -82,7 +82,7 @@
                                     <h3 class="input_title">Name*</h3>
                                     <div class="form_item">
                                         <label for="nameInput"><i class="fas fa-user"></i></label>
-                                        <input id="nameInput" type="text" name="name" placeholder="Name">
+                                        <input id="nameInput" type="text" name="name" placeholder="Name" value="{{ old('name') }}">
                                     </div>
                                     @error('name')
                                         <div class="alert alert-danger" role="alert">
@@ -95,7 +95,7 @@
                                     <h3 class="input_title">Email*</h3>
                                     <div class="form_item">
                                         <label for="emailInput"><i class="fas fa-envelope"></i></label>
-                                        <input id="emailInput" type="email" name="email" placeholder="Email">
+                                        <input id="emailInput" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
                                     </div>
                                     @error('email')
                                         <div class="alert alert-danger" role="alert">

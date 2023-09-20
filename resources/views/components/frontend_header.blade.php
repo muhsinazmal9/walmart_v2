@@ -44,7 +44,7 @@
             <div class="row align-items-center">
                 <div class="col col-lg-3 col-md-3 col-sm-12">
                     <div class="brand_logo">
-                        <a class="brand_link" href="{{ route('frontend_index') }}">
+                        <a class="brand_link" href="{{ route('frontend.index') }}">
                             <img src="{{ asset('frontend_assets') }}/images/logo/logo_1x.png" srcset="{{ asset('frontend_assets') }}/images/logo/logo_2x.png 2x" alt="">
                         </a>
                     </div>
@@ -80,7 +80,7 @@
                             <i class="icon icon-ShoppingCart"></i>
                             <small class="cart_counter">3</small>
                         </span>
-                        {{-- <span class="cart_amount">$909.00</span>    --}}
+                        {{-- <span class="cart_amount">$909.00</span> --}}
                     </button>
                 </div>
             </div>
@@ -144,12 +144,12 @@
                                         <li><a href="error.html">404 Error</a></li>
                                     </ul>
                                 </li> --}}
-                                <li><a class="nav-link" href="{{ route('frontend_index') }}">Home</a></li>
-                                <li><a class="nav-link" href="{{ route('frontend_index') }}">Shop</a></li>
-                                <li><a class="nav-link" href="{{ route('frontend_about') }}">About Us</a></li>
+                                <li><a class="nav-link" href="{{ route('frontend.index') }}">Home</a></li>
+                                <li><a class="nav-link" href="{{ route('frontend.shop') }}">Shop</a></li>
+                                <li><a class="nav-link" href="{{ route('frontend.about') }}">About Us</a></li>
                                 <li>
                                     @auth
-                                    <a class="nav-link" href="{{ route('dashboard_index') }}">Dashboard</a>
+                                    <a class="nav-link" href="{{ route('dashboard_index') }}" target="_blank">Dashboard</a>
                                         @csrf
                                     </form>
                                     @else

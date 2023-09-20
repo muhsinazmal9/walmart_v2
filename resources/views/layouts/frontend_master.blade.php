@@ -181,7 +181,7 @@
                     <div class="row align-items-center">
                         <div class="col col-md-6">
                             <p class="copyright_text">
-                                ©{{ now()->year }} <a href="{{ route('frontend_index') }}">{{ Config('app.name') }}</a>. All Rights Reserved.
+                                ©{{ now()->year }} <a href="{{ route('frontend.index') }}">{{ Config('app.name') }}</a>. All Rights Reserved.
                             </p>
                         </div>
                         
