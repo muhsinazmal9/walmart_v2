@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -12,7 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('backend.category.index');
+        $categories = Category::all();
+        return view('backend.category.index', compact('categories'));
     }
 
     /**
@@ -28,20 +30,20 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-            $request->validate([
-                'category_name'=>'required',
-                'category_icon'=>'required',
-            ]); 
-        */
 
         // some simple validation
         $request->validate([
-            '*'=>'required',
+            'category_name'=>'required|unique:categories,category_name',
+            'category_icon'=>'required',
         ]);
 
-
-
+        // insert to database
+        Category::insert([
+            'category_name' => $request->category_name,
+            'category_icon' => $request->category_icon,
+            'created_at' => Carbon::now()
+        ]);
+        return back()->with('success', 'New Category Added Successfully!');
         // dd($request->all());
     }
 

@@ -24,6 +24,9 @@
 
     <!-- App css -->
     <link rel="stylesheet" href="{{ asset('dashboard_assets') }}/assets/css/app.min.css" type="text/css">
+    
+    <!-- Fontawesoem 5 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -727,11 +730,15 @@
     <script src="{{ asset('dashboard_assets') }}/vendors/vmap/jquery.vmap.min.js"></script>
     <script src="{{ asset('dashboard_assets') }}/vendors/vmap/maps/jquery.vmap.usa.js"></script>
     <script src="{{ asset('dashboard_assets') }}/assets/js/examples/vmap.js"></script>
+    
+    
+    <!-- Fontaweosme 5 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Dashboard scripts -->
     <script src="{{ asset('dashboard_assets') }}/assets/js/examples/pages/ecommerce-dashboard.js"></script>
 
-<!-- App scripts -->
-<script src="{{ asset('dashboard_assets') }}/assets/js/app.min.js"></script>
+    <!-- App scripts -->
+    <script src="{{ asset('dashboard_assets') }}/assets/js/app.min.js"></script>
 </body>
 </html>
