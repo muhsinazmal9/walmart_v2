@@ -4,6 +4,7 @@
     <x-frontend_header headerClass="header-style-3" divClass="collapse"/>
 @endsection
 
+
 @section('content')
     <!-- product quick view modal - start
             ================================================== -->
