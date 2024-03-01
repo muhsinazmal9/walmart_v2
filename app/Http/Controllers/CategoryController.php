@@ -14,6 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+
         return view('backend.category.index', compact('categories'));
     }
 
@@ -33,16 +34,17 @@ class CategoryController extends Controller
 
         // some simple validation
         $request->validate([
-            'category_name'=>'required|unique:categories,category_name',
-            'category_icon'=>'required',
+            'category_name' => 'required|unique:categories,category_name',
+            'category_icon' => 'required',
         ]);
 
         // insert to database
         Category::insert([
             'category_name' => $request->category_name,
             'category_icon' => $request->category_icon,
-            'created_at' => Carbon::now()
+            'created_at' => Carbon::now(),
         ]);
+
         return back()->with('success', 'New Category Added Successfully!');
         // dd($request->all());
     }

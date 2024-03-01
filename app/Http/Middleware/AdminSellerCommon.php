@@ -15,7 +15,7 @@ class AdminSellerCommon
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->user()->role == 'admin' || auth()->user()->role == 'seller')  {
+        if (auth()->user()->role == 'admin' || auth()->user()->role == 'seller') {
             return $next($request);
         }
         abort(403);

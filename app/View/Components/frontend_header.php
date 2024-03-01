@@ -9,14 +9,16 @@ use Illuminate\View\Component;
 class frontend_header extends Component
 {
     public $headerClass;
+
     public $divClass;
+
     /**
      * Create a new component instance.
      */
-    public function __construct($headerClass,$divClass)
+    public function __construct($headerClass, $divClass)
     {
-        $this-> headerClass = $headerClass;
-        $this-> divClass = $divClass;
+        $this->headerClass = $headerClass;
+        $this->divClass = $divClass;
     }
 
     /**
